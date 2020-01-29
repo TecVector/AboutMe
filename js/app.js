@@ -10,7 +10,7 @@ if (timeOfDay < 12) {
 
 var nameOfVisitor = prompt("Good " + timeSalutation + ', how should I address you?');
 while (!nameOfVisitor) {
-    nameOfVisitor = prompt('I\'m sorry, please enter a valid name here.  I don\'t want to just know as null!');
+    nameOfVisitor = prompt('I\'m sorry, please enter a valid name here.  I don\'t want to just know you as null!');
 }
 
 var questions = [
