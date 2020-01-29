@@ -70,6 +70,8 @@ var isCorrect = false;
 for (var x = guessesLeft; x > 0; x--) {
     while (!answer6) {
         answer6 = Number(prompt('Please enter a number only.  You have ' + (guessesLeft + 1) + ' guesses left.'))
+        guessesLeft--;
+        continue;
     }
     if (answer6 === generatedNumber) {
         alert('Great job!  You guessed it correctly!');
@@ -85,7 +87,11 @@ for (var x = guessesLeft; x > 0; x--) {
         alert('Sorry, too high!  Try again!')
     }
     guessesLeft--;
-    answer6 = Number(prompt("What's your next guess?"));
+    var guessesLeftResponse = 'You have ' + guessesLeft + ' guesses remaining.'
+    if (guessesLeft === 1) {
+        guessesLeftResponse = 'This is your last guess!';
+    }
+    answer6 = Number(prompt('What\'s your next guess? ' + guessesLeftResponse));
 }
 
 var question7 = questions[6];
